@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(0, 159, 231);
+  background: linear-gradient(326deg, rgba(34, 187, 39, 0.8) 0%, rgba(0, 159, 231, 1) 15%, rgba(0, 222, 223, 1) 50%, rgba(34, 187, 39, 0.8) 100%);
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(7.5px);
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.product .can {
+  width: 300px;
+  height: 300px;
+  transform: translateY(-120px) rotate(20deg);
+  animation: animate1 2s infinite alternate;
+}
+.product .croot {
+  position: absolute;
+  width: 250px;
+  transform: translateX(-280px) translateY(150px);
+}
+.card .desc {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-30px);
+}
+.desc h3 {
+  padding: 16px;
+  text-align: center;
+}
+.desc p {
+  padding: 16px;
+  text-align: center;
+  font-size: 10px;
+}
+.desc .price {
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.desc button {
+  width: 80%;
+  padding: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 16px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.card button:hover {
+  background-color: #3e8e41;
+}
+.container .ice-1 {
+  position: absolute;
+  width: 180px;
+  transform: translateY(130px) translateX(300px) rotate(100deg);
+  animation: animate2 3s infinite alternate;
+}
+.container .bg {
+  position: absolute;
+  width: 50rem;
+  transform: translateX(270px);
+}
+.container .oval {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: #ffdf10;
+  border-radius: 50%;
+  transform: translateY(180px) translateX(-410px);
+}
+/* == Animation == */
+@keyframes animate1 {
+  0% {
+    transform: translateY(-120px) rotate(20deg);
+  }
+  100% {
+    transform: translateY(-100px) rotate(20deg);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateY(140px) translateX(280px) rotate(90deg);
+  }
+  100% {
+    transform: translateY(100px) translateX(280px) rotate(100deg);
+  }
+}
+/* == Responsive == */
+@media only screen and (max-width: 480px) {
+  .card {
+    display: block;
+    width: 90%;
+    height: auto;
+    text-align: center;
+  }
+  .product .can {
+    width: 200px;
+    height: 200px;
+    transform: translateY(-50px) translateX(0px);
+  }
+  .card .desc {
+    display: inline-block;
+    transform: none;
+  }
+  .desc h3 {
+    padding: 30px 0 10px;
+  }
+  .desc p {
+    padding: 7px;
+  }
+  .desc .price {
+    padding: 7px;
+  }
+  .desc button {
+    width: 70%;
+  }
+  .product .croot {
+    width: 200px;
+    transform: translateX(-195px) translateY(100px);
+  }
+  .container .bg {
+    transform: translateX(180px);
+  }
+  @keyframes animate1 {
+    0% {
+      transform: translateY(-60px) rotate(20deg);
+    }
+    100% {
+      transform: translateY(-50px) rotate(20deg);
+    }
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .card {
+    width: 90%;
+    height: auto;
+  }
+  .product .can {
+    width: 200px;
+    height: 200px;
+  }
+  .product .croot {
+    width: 200px;
+    transform: translateX(-180px) translateY(100px);
+  }
+  .desc h3 {
+    padding: 30px 0 10px;
+  }
+  .desc p {
+    padding: 7px;
+  }
+  .desc .price {
+    padding: 7px;
+  }
+  .desc button {
+    width: 50%;
+  }
+}
